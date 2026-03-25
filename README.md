@@ -1,6 +1,6 @@
 # Pension Remittance Reconciliation System (SQL Project)
 
-## 📌 Project Overview
+## Project Overview
 
 This project simulates a pension remittance reconciliation system used in financial and pension administration platforms.
 
@@ -49,11 +49,11 @@ To identify discrepancies between:
 
 ## Key SQL Queries
 
-### 1. 🔴 Underpaid Employers
+### 1. Underpaid Employers
 
 Identifies employers who remitted less than the expected total contributions.
 
-```sql id="k2m91x"
+```sql
 SELECT 
     e.Name AS Employer_Name,
     SUM(emp.Monthly_Contribution) AS Expected_Total,
@@ -68,11 +68,11 @@ HAVING r.Amount_Paid < SUM(emp.Monthly_Contribution);
 
 ---
 
-### 2. 🟢 Fully Paid Employers
+### 2. Fully Paid Employers
 
 Identifies employers who remitted the exact expected amount.
 
-```sql id="h7s4qp"
+```sql
 SELECT 
     e.Name AS Employer_Name,
     SUM(emp.Monthly_Contribution) AS Expected_Total,
@@ -86,11 +86,11 @@ HAVING r.Amount_Paid = SUM(emp.Monthly_Contribution);
 
 ---
 
-### 3. 🔵 Overpaid Employers
+### 3. Overpaid Employers
 
 Identifies employers who remitted more than required.
 
-```sql id="p4x8zn"
+```sql
 SELECT 
     e.Name AS Employer_Name,
     SUM(emp.Monthly_Contribution) AS Expected_Total,
@@ -105,7 +105,7 @@ HAVING r.Amount_Paid > SUM(emp.Monthly_Contribution);
 
 ---
 
-## 📊 Key Insights
+## Key Insights
 
 * Detects underpayment and overpayment scenarios
 * Highlights compliance gaps in pension remittance
@@ -113,13 +113,13 @@ HAVING r.Amount_Paid > SUM(emp.Monthly_Contribution);
 
 ---
 
-## 🛠 Tools & Technologies
+## Tools & Technologies
 
 * SQL (MySQL / PostgreSQL / SQLite)
 
 ---
 
-## 🚀 How to Run This Project
+## How to Run This Project
 
 1. Clone the repository
 2. Run the `schema.sql` file to create tables and insert data
@@ -128,7 +128,7 @@ HAVING r.Amount_Paid > SUM(emp.Monthly_Contribution);
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 * `schema.sql` → Table creation and sample data
 * `queries.sql` → Analytical queries
@@ -136,7 +136,7 @@ HAVING r.Amount_Paid > SUM(emp.Monthly_Contribution);
 
 ---
 
-## 💼 Business Relevance
+## Business Relevance
 
 This project reflects real-world data validation processes used in:
 
